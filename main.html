@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>라이즈 홍보 웹사이트</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #000000;
+            color: #fff;
+            padding: 0rem;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            color: #fff;
+            padding: 1rem;
+            display: flex; 
+            justify-content: center; /* 중앙에 네비게이션 링크 배치 */
+            position: relative; /* 오디오바를 절대 위치시킬 수 있도록 relative */
+        }
+
+        nav .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* 오디오바 우측 정렬 및 스타일 */
+        nav .audio-bar {
+            position: absolute;
+            right: 1rem; /* 오른쪽 끝에 배치 */
+            top: 50%;
+            transform: translateY(-50%); /* 수직 가운데 정렬 */
+            width: 220px; /* 오디오바 크기 조절 */
+            height: 35px; /* 높이 조절 */
+        }
+        main {
+            padding: 1rem;
+            background-image: url('brick.jpg'); /* 배경 이미지 URL */
+            background-size: cover; /* 배경 이미지를 요소 크기에 맞게 조정 */
+            background-repeat: no-repeat; /* 배경 이미지 반복하지 않기 */
+            background-position: center; /* 배경 이미지를 중앙에 위치 */
+            margin: 0rem;
+        }
+
+
+        /* 첫 번째 섹션 */
+        .section-one {
+            padding: 1rem;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-one img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        /* 두 번째 섹션과 사이드바을 포함하는 컨테이너 */
+        .content-wrapper {
+            display: flex; /* Flexbox로 설정 */
+            margin-bottom: 10rem;
+        }
+
+        /* 두 번째 섹션 */
+        .section-two {
+            flex: 2;
+            padding: 1rem;
+            color: #333;
+            margin-top: 10rem;
+            margin-left: 10rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 사이드바 */
+        aside {
+            flex: 1;
+            background: rgba(244, 244, 244, 0.8); /* 반투명 배경 */
+            padding: 1rem;
+            margin-top: 11rem;
+            margin-left: -5rem;
+            margin-right: 12rem;
+            align-self: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        /* 세 번째 섹션 - 포트폴리오 */
+        section.portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* 항목 간의 간격을 자동으로 맞추기 */
+            margin: 0; /* 섹션 자체의 외부 여백을 제거 */
+            padding: 0 2%; /* 좌우에 내부 여백 추가 */
+        }
+
+        section.portfolio .portfolio-inner {
+            width: 30%;
+            padding: 1rem 1rem 1.5rem 1rem;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            margin-bottom: 3rem;
+        }
+
+        section.portfolio .portfolio-inner:nth-child(3n) {
+            margin-right: 0; /* 세 번째 항목마다 오른쪽 마진 제거 */
+        }
+
+        section.portfolio .portfolio-inner img {
+            width: 100%;
+            display: block;
+        }
+
+        section.portfolio .portfolio-inner strong {
+            color: #ff6a6a;
+            margin: 0.5rem 0;
+            display: block;
+        }
+
+        section.portfolio .portfolio-inner h3 {
+            font-size: 1.75rem;
+        }
+
+         /* SNS 아이콘 스타일 */
+         .sns-icons {
+            margin: 1rem 0;
+        }
+
+        .sns-icons img {
+            width: 40px; /* 아이콘 크기 */
+            height: 40px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 0rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html"><img src='logo1.jpg'></a>
+    </header>
+
+    <nav>
+        <div class="nav-links">
+            <a href='profile.html'>PROFILE</a>
+            <a href='schedule.html'>SCHEDULE</a>
+            <a href='news.html'>NEWS</a>
+            <a href='mv.html'>VIDEO</a>
+            <a href='letter.html'>LETTER</a>
+        </div>
+        <audio class="audio-bar" src="audio.mp3" controls autoplay loop></audio>
+    </nav>
+
+    <main>
+        <!-- 첫 번째 섹션 -->
+        <section class="section-one">
+            <img src='main.jpg'>
+        </section>
+
+        <!-- 두 번째 섹션과 사이드바 -->
+        <div class="content-wrapper">
+            <!-- 두 번째 섹션 -->
+            <section class="section-two">
+                <img src='2n.jpg'>
+            </section>
+
+            <!-- 사이드바 -->
+            <aside>
+                <h2>‘톱티어’ 라이즈, 첫 미니앨범 ‘RIIZING’ <br>드디어 오늘 발매!</h2>
+                <h3>2024.06.17</h3>
+                <br><br><p>‘K팝 톱티어’ 라이즈(RIIZE, 에스엠엔터테인먼트 소속)가 드디어 오늘(17일) 첫 미니앨범 ‘RIIZING’(라이징)을 발매한다. 타이틀 곡 ‘Boom Boom Bass’는 펑키한 디스코 비트와 그루비한 베이스 라인이 돋보이는 곡으로, 가사에는 베이스 기타 연주를 통해 서로에 대한 설렘을 자유롭게 표현하는 청춘의 모습을 그렸으며, 음의 높낮이로 점차 깊어지는 친밀감을 나타낸 곡의 전개가 듣는 재미를 더했다.
+                    
+                    더불어 뮤직비디오는 전설의 베이스 기타를 찾아가는 다이내믹한 스토리로 제작되었고, 퍼포먼스 역시 베이스 기타의 묵직한 사운드가 절제된 매력의 포인트 동작들로 구현되는 등 곡의 메인 콘셉트인 ‘베이스 기타’에서 영감을 얻은 콘셉추얼한 콘텐츠가 한층 몰입감을 높일 전망이다.
+                    
+                    또한 이번 앨범에는 타이틀 곡 외에도 미리 음원 공개되어 많은 사랑을 받고 있는 ‘Siren’(사이렌), ‘Impossible’(임파서블), ‘9 Days’(나인 데이즈), ‘Honestly’(어니스틀리), ‘One Kiss’(원 키스), ‘Talk Saxy’(토크 색시), ‘Love 119’(러브 원원나인)까지 총 8곡의 다채로운 ‘이모셔널 팝’이 수록되어 있다.
+                    
+                    한편, 라이즈는 오늘 오후 8시 서울 용산구 블루스퀘어 마스터카드홀에서 첫 미니앨범 발매 기념 프리미어를 개최하고 타이틀 곡 ‘Boom Boom Bass’ 무대를 최초 공개하며, 이날 현장은 유튜브·틱톡·위버스 라이즈 채널을 통해 온라인 생중계된다. <br><br></p>
+            </aside>
+        </div>
+
+        <!-- 세 번째 섹션 - 포트폴리오 -->
+        <section class="portfolio">
+            <div class="portfolio-inner">
+                <img src="memo.jpg" alt="포트폴리오 이미지 1">
+                <strong>ALBUM</strong>
+                <h3>Memories</h3>
+                <p>Prologue Single</p>
+            </div>
+
+            <div class="portfolio-inner">
+                <img src="gui.jpg" alt="포트폴리오 이미지 2">
+                <strong>ALBUM</strong>
+                <h3>Get A Guitar</h3>
+                <p>The 1st Single</p>
+            </div>
+
+            <div class="portfolio-inner">
+                <img src="talk.jpg" alt="포트폴리오 이미지 3">
+                <strong>ALBUM</strong>
+                <h3>Talk Saxy</h3>
+                <p>Digital Single</p>
+            </div>
+
+            <div class="portfolio-inner">
+                <img src="love.jpg" alt="포트폴리오 이미지 4">
+                <strong>ALBUM</strong>
+                <h3>Love 119</h3>
+                <p>Digital Single</p>
+            </div>
+
+            <div class="portfolio-inner">
+                <img src="siren.jpg" alt="포트폴리오 이미지 5">
+                <strong>ALBUM</strong>
+                <h3>Siren</h3>
+                <p>Digital Single</p>
+            </div>
+
+            <div class="portfolio-inner">
+                <img src="impo.jpg" alt="포트폴리오 이미지 6">
+                <strong>ALBUM</strong>
+                <h3>Impossible</h3>
+                <p>Digital Single</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="sns-icons">
+            <a href="https://www.youtube.com/" target="_blank">
+                <img src="youtube.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="x.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="insta.png" alt="Instagram">
+            </a>
+        </div>
+        <p>Copyright &copy; 2024. 22461019 김민서</p>
+    </footer>
+
+</body>
+</html>
